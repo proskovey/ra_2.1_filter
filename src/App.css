@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    max-width: 960px;
+    margin: 50px auto;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.filters button {
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #222222;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.filters button.selected {
+    background: #222;
+    color: #fff;
+}
+
+.projects {
+    column-count: 4;
+    column-gap: 10px;
+}
+
+.project {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+.project img {
+    max-width: 100%;
+    display: block;
+    grid-row: 1 / -1;
+    grid-column: 1;
+}
